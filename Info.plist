@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconName</key>
+	<string>AppIcon</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-9404799280370656~5836829386</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>NSMotionUsageDescription</key>
+	<string>MAGNETICA uses motion sensors to detect magnetic fields and visualize aura energy around you.</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>This identifier may be used to show relevant ads and measure ad performance.</string>
+	<key>SKAdNetworkItems</key>
+	<array>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>cstr6suwn9.skadnetwork</string>
+		</dict>
+	</array>
+</dict>
+</plist>
