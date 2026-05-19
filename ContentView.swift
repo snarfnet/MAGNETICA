@@ -52,7 +52,7 @@ struct ContentView: View {
             magnetometer.stop()
             meditation.stop()
         }
-        .onChange(of: magnetometer.currentReading?.magnitude ?? 0) { _, newValue in
+        .onChange(of: magnetometer.currentReading?.magnitude ?? 0) { newValue in
             if meditation.isActive {
                 meditation.updateFromMagneticField(
                     magnitude: newValue,
