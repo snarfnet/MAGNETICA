@@ -2,9 +2,8 @@
   "images": [
     {
       "idiom": "universal",
-      "platform": "ios",
-      "size": "1024x1024",
-      "filename": "magnetica-icon.png"
+      "filename": "mystic-orb.png",
+      "scale": "1x"
     }
   ],
   "info": {

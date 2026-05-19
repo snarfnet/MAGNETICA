@@ -66,8 +66,19 @@ struct ContentView: View {
 
     private var header: some View {
         VStack(spacing: 6) {
+            Image("MysticOrb")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 58, height: 58)
+                .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                        .stroke(Color.magneticaGold.opacity(0.38), lineWidth: 1)
+                )
+                .shadow(color: .magneticaCyan.opacity(0.35), radius: 18)
+
             Text("MAGNETICA")
-                .font(.system(size: 32, weight: .black, design: .rounded))
+                .font(.system(size: 30, weight: .black, design: .rounded))
                 .tracking(6)
                 .foregroundStyle(
                     LinearGradient(
@@ -83,7 +94,7 @@ struct ContentView: View {
                 .tracking(2)
                 .foregroundColor(.magneticaGold.opacity(0.7))
         }
-        .padding(.top, 16)
+        .padding(.top, 14)
         .padding(.bottom, 8)
     }
 
@@ -102,12 +113,22 @@ struct ContentView: View {
                         .foregroundColor(mode == m ? .black : .magneticaFrost.opacity(0.6))
                         .frame(maxWidth: .infinity)
                         .frame(height: 36)
-                        .background(mode == m ? Color.magneticaViolet : Color.white.opacity(0.06))
+                        .background(
+                            mode == m
+                            ? AnyShapeStyle(LinearGradient(
+                                colors: [.magneticaGold, .magneticaCyan],
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            ))
+                            : AnyShapeStyle(Color.white.opacity(0.07))
+                        )
                 }
             }
         }
         .clipShape(RoundedRectangle(cornerRadius: 8))
-        .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.magneticaViolet.opacity(0.3), lineWidth: 1))
+        .background(Color.black.opacity(0.28), in: RoundedRectangle(cornerRadius: 8))
+        .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.magneticaGold.opacity(0.24), lineWidth: 1))
+        .shadow(color: .magneticaCyan.opacity(0.12), radius: 14)
         .padding(.horizontal, 16)
         .padding(.bottom, 8)
     }
@@ -412,9 +433,14 @@ struct ContentView: View {
         .padding(14)
         .background(
             ZStack {
-                Color.black.opacity(0.55)
+                Color.black.opacity(0.46)
                 LinearGradient(
-                    colors: [.magneticaViolet.opacity(0.08), .clear, .magneticaCyan.opacity(0.04)],
+                    colors: [
+                        .white.opacity(0.07),
+                        .magneticaViolet.opacity(0.09),
+                        .clear,
+                        .magneticaCyan.opacity(0.06)
+                    ],
                     startPoint: .topLeading,
                     endPoint: .bottomTrailing
                 )
@@ -425,13 +451,18 @@ struct ContentView: View {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(
                     LinearGradient(
-                        colors: [.magneticaViolet.opacity(0.4), .white.opacity(0.08), .magneticaCyan.opacity(0.2)],
+                        colors: [
+                            .magneticaGold.opacity(0.34),
+                            .white.opacity(0.1),
+                            .magneticaCyan.opacity(0.28)
+                        ],
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing
                     ),
                     lineWidth: 1
                 )
         )
+        .shadow(color: .black.opacity(0.32), radius: 18, y: 8)
     }
 
     private func auraColorToSwiftUI(_ color: AuraColor) -> Color {

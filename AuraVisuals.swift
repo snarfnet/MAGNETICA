@@ -12,16 +12,25 @@ struct CosmicBackground: View {
             Color.magneticaDeep
                 .ignoresSafeArea()
 
-            // Nebula gradient
+            Image("MysticBackground")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+                .saturation(1.05 + fluctuation * 0.35)
+                .brightness(-0.08 + magnitude * 0.04)
+                .contrast(1.08)
+                .overlay(Color.black.opacity(0.18))
+
+            // Live magnetic veil
             RadialGradient(
                 colors: [
-                    Color(hue: hue, saturation: 0.6, brightness: 0.15).opacity(0.5),
-                    Color(hue: hue + 0.15, saturation: 0.5, brightness: 0.08).opacity(0.3),
+                    Color(hue: hue, saturation: 0.75, brightness: 0.55).opacity(0.24 + magnitude * 0.18),
+                    Color(hue: hue + 0.18, saturation: 0.55, brightness: 0.28).opacity(0.12 + fluctuation * 0.18),
                     Color.clear
                 ],
                 center: .center,
-                startRadius: 50,
-                endRadius: 500
+                startRadius: 40,
+                endRadius: 420
             )
             .ignoresSafeArea()
 
@@ -46,14 +55,25 @@ struct CosmicBackground: View {
             }
             .ignoresSafeArea()
 
-            // Subtle nebula clouds
+            LinearGradient(
+                colors: [
+                    Color.black.opacity(0.46),
+                    Color.clear,
+                    Color.black.opacity(0.34)
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .ignoresSafeArea()
+
+            // Sensor-reactive edge glows
             GeometryReader { geo in
                 ZStack {
                     Ellipse()
                         .fill(
                             RadialGradient(
                                 colors: [
-                                    Color.magneticaViolet.opacity(0.06 + magnitude * 0.08),
+                                    Color.magneticaViolet.opacity(0.08 + magnitude * 0.14),
                                     Color.clear
                                 ],
                                 center: .center,
@@ -68,7 +88,7 @@ struct CosmicBackground: View {
                         .fill(
                             RadialGradient(
                                 colors: [
-                                    Color.magneticaCyan.opacity(0.04 + fluctuation * 0.06),
+                                    Color.magneticaCyan.opacity(0.06 + fluctuation * 0.12),
                                     Color.clear
                                 ],
                                 center: .center,
