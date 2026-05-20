@@ -6,11 +6,7 @@ class MAGNETICAAppDelegate: NSObject, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            DispatchQueue.main.async {
-                MobileAds.shared.start()
-            }
-        }
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         return true
     }
 }
