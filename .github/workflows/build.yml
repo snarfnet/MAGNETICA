@@ -71,6 +71,11 @@ jobs:
         echo "$ASC_API_KEY_CONTENT" | base64 -D > ~/.appstoreconnect/private_keys/AuthKey_WDXGY9WX55.p8
         cp ~/.appstoreconnect/private_keys/AuthKey_WDXGY9WX55.p8 /tmp/asc_key.p8
 
+    - name: Debug signing identities
+      run: |
+        security find-identity -v -p codesigning build.keychain
+        security find-identity -v -p codesigning
+
     - name: Build Archive
       run: |
         xcodebuild archive \
