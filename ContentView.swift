@@ -40,7 +40,7 @@ struct ContentView: View {
                 }
 
                 AdMobBannerView()
-                    .frame(width: 320, height: 50)
+                    .frame(maxWidth: .infinity, maxHeight: 50)
                     .frame(maxWidth: .infinity)
                     .background(Color.black.opacity(0.7))
             }
