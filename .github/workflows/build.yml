@@ -80,6 +80,7 @@ jobs:
           -destination "generic/platform=iOS" \
           -archivePath build/MAGNETICA.xcarchive \
           CODE_SIGN_STYLE=Automatic \
+          CODE_SIGN_IDENTITY="Apple Distribution" \
           DEVELOPMENT_TEAM=83VGKGSQUH \
           CURRENT_PROJECT_VERSION=$BUILD_NUM \
           -allowProvisioningUpdates \
