@@ -2,7 +2,7 @@
 """Upload IPA and submit for App Store review."""
 import subprocess, sys, time, json, jwt, requests, os, glob
 
-APP_ID = "6770287651"
+APP_ID = "6770938265"
 BUNDLE_ID = "com.snarfnet.magnetica"
 KEY_PATH = "/tmp/asc_key.p8"
 KEY_ID = "WDXGY9WX55"

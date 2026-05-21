@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1779364088490,
+  "projectRoot": "C:\\Users\\Windows\\Magnetica",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "scripts"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "Assets.xcassets": {
+      "path": "Assets.xcassets",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1779364088445,
+      "keyFiles": [
+        "Contents.json"
+      ]
+    },
+    "screenshots": {
+      "path": "screenshots",
+      "purpose": null,
+      "fileCount": 8,
+      "lastAccessed": 1779364088446,
+      "keyFiles": [
+        "APP_IPHONE_65_0.png",
+        "APP_IPHONE_65_1.png",
+        "APP_IPHONE_65_2.png",
+        "APP_IPHONE_65_3.png",
+        "APP_IPHONE_67_0.png"
+      ]
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 1,
+      "lastAccessed": 1779364088447,
+      "keyFiles": [
+        "submit.py"
+      ]
+    },
+    "SubmissionAssets": {
+      "path": "SubmissionAssets",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1779364088448,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "project.yml",
+      "accessCount": 2,
+      "lastAccessed": 1779365971731,
+      "type": "file"
+    },
+    {
+      "path": "scripts\\submit.py",
+      "accessCount": 1,
+      "lastAccessed": 1779364099036,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

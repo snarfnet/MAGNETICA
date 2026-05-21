@@ -23,6 +23,10 @@ targets:
         UILaunchScreen: {}
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UIRequiresFullScreen: true
         NSMotionUsageDescription: MAGNETICA uses motion sensors to detect magnetic fields and visualize aura energy around you.
     settings:
       base:
