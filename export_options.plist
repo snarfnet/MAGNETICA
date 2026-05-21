@@ -8,9 +8,11 @@
     <string>83VGKGSQUH</string>
     <key>signingStyle</key>
     <string>automatic</string>
-    <key>uploadSymbols</key>
-    <true/>
     <key>uploadBitcode</key>
     <false/>
+    <key>uploadSymbols</key>
+    <true/>
+    <key>destination</key>
+    <string>upload</string>
 </dict>
 </plist>

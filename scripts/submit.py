@@ -10,7 +10,7 @@ ISSUER = "2be0734f-943a-4d61-9dc9-5d9045c46fec"
 
 build_number = sys.argv[1] if len(sys.argv) > 1 else None
 
-# Upload IPA
+# Upload IPA (skip if destination=upload already handled it)
 ipa = glob.glob("build/export/*.ipa")
 if ipa:
     print(f"Uploading {ipa[0]}...")
@@ -22,12 +22,8 @@ if ipa:
     print(r.stdout)
     if r.returncode != 0:
         print(r.stderr)
-        print("altool failed, trying notarytool...")
-        subprocess.run([
-            "xcrun", "notarytool", "submit", ipa[0],
-            "--key", os.path.expanduser(f"~/.appstoreconnect/private_keys/AuthKey_{KEY_ID}.p8"),
-            "--key-id", KEY_ID, "--issuer", ISSUER
-        ])
+else:
+    print("No local IPA (uploaded via export step)")
 
 def get_token():
     with open(KEY_PATH) as f:
