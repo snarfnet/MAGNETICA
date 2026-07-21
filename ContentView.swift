@@ -38,11 +38,6 @@ struct ContentView: View {
                     .padding(.top, 12)
                     .padding(.bottom, 80)
                 }
-
-                AdMobBannerView()
-                    .frame(maxWidth: .infinity, maxHeight: 50)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.black.opacity(0.7))
             }
         }
         .onAppear {

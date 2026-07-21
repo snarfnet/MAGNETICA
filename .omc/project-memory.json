@@ -73,14 +73,38 @@
   "hotPaths": [
     {
       "path": "project.yml",
+      "accessCount": 3,
+      "lastAccessed": 1784600202235,
+      "type": "file"
+    },
+    {
+      "path": "ContentView.swift",
       "accessCount": 2,
-      "lastAccessed": 1779365971731,
+      "lastAccessed": 1784600172488,
       "type": "file"
     },
     {
       "path": "scripts\\submit.py",
+      "accessCount": 2,
+      "lastAccessed": 1784600301318,
+      "type": "file"
+    },
+    {
+      "path": "AdMobBannerView.swift",
       "accessCount": 1,
-      "lastAccessed": 1779364099036,
+      "lastAccessed": 1784600149613,
+      "type": "file"
+    },
+    {
+      "path": "App.swift",
+      "accessCount": 1,
+      "lastAccessed": 1784600149990,
+      "type": "file"
+    },
+    {
+      "path": "Info.plist",
+      "accessCount": 1,
+      "lastAccessed": 1784600193934,
       "type": "file"
     }
   ],

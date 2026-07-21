@@ -1,7 +1,7 @@
 {
-  "tool_name": "Read",
-  "tool_input_preview": "{\"file_path\":\"C:\\\\Users\\\\Windows\\\\NomimonoWars\\\\NomimonoWars\\\\project.yml\"}",
-  "error": "File does not exist. Note: your current working directory is C:\\Users\\Windows\\Magnetica.",
-  "timestamp": "2026-05-21T12:20:01.589Z",
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"python << 'EOF'\\nimport jwt,time,json,urllib.request\\nKEY_ID='WDXGY9WX55';ISSUER='2be0734f-943a-4d61-9dc9-5d9045c46fec'\\nkey=open(r'C:\\\\Users\\\\Windows\\\\asc-automation\\\\AuthKey_WDXGY9WX55.p...",
+  "error": "Exit code 1\n== versions ==\r\n  264240b0-52b6-4917-9b8a-84babb0e3ed2 1.0 READY_FOR_SALE\r\n== builds ==\r\n  425edb2e-f2ed-473d-a5a9-c4e329a92129 CFBundleVersion=37 VALID\r\n  ee469cbd-ad36-4994-9315-e9113fff67b0 CFBundleVersion=36 VALID\r\n  9082d3b2-f27d-4376-8c92-ed291221a5b5 CFBundleVersion=6 VALID\r\nTraceback (most recent call last):\r\n  File \"<stdin>\", line 19, in <module>\r\nUnicodeEncodeError: 'cp932' codec can't encode character '\\xa5' in position 3: illegal multibyte sequence",
+  "timestamp": "2026-07-21T02:17:06.459Z",
   "retry_count": 1
 }
