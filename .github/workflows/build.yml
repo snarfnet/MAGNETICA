@@ -43,6 +43,7 @@ jobs:
         PLIST="MAGNETICA/Info.plist"
         if [ ! -f "$PLIST" ]; then PLIST="Info.plist"; fi
         /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $BUILD_NUM" "$PLIST" 2>/dev/null || true
+        /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString 1.1" "$PLIST" 2>/dev/null || /usr/libexec/PlistBuddy -c "Add :CFBundleShortVersionString string 1.1" "$PLIST"
         /usr/libexec/PlistBuddy -c "Delete :CFBundleIconName" "$PLIST" 2>/dev/null || true
         /usr/libexec/PlistBuddy -c "Add :CFBundleIconName string AppIcon" "$PLIST"
         echo "Info.plist patched"
